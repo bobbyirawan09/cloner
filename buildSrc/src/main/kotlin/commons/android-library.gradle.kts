@@ -27,6 +27,7 @@ import dependencies.Dependencies
 import extensions.addTestsDependencies
 import extensions.addCoroutineDependencies
 import extensions.implementation
+import extensions.getLocalProperty
 
 plugins {
     id("com.android.library")
@@ -60,12 +61,14 @@ android {
             isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
 
             buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
+            buildConfigField("String","YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
         }
         getByName(BuildType.DEBUG) {
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
 
             buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
+            buildConfigField("String","YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
         }
     }
 

@@ -1,21 +1,25 @@
 package com.bobby.cloner.core.data.remote
 
+import com.bobby.cloner.utils.Constants.YELP_CLIENT
+import com.bobby.cloner.utils.Constants.YELP_RETROFIT
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 val remoteModule = module {
-    single {
+    single(named(YELP_CLIENT)) {
         OkHttpClient.Builder()
             .addInterceptor(HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY))
+            .addInterceptor(AuthInterceptor())
             .connectTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
             .build()
     }
-    single {
+    single(named(YELP_RETROFIT)) {
         Retrofit.Builder()
             .baseUrl("https://tourism-api.dicoding.dev/")
             .addConverterFactory(GsonConverterFactory.create())

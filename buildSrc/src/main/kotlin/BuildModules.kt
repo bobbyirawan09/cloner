@@ -4,5 +4,6 @@
 object BuildModules {
     const val APP = ":app"
     const val CORE = ":core"
+    const val UTILS = ":utils"
     const val LIBRARY = ":library"
 }

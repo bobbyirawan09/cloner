@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import BuildModules.UTILS
 import extensions.addKoinCoreDependencies
 import extensions.addNetworkDependencies
 
@@ -21,6 +22,8 @@ plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
 }
 dependencies {
+    implementation(project(UTILS))
+
     addNetworkDependencies()
     addKoinCoreDependencies()
 }
