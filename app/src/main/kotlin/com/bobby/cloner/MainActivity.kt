@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.v15h4l.template
+package com.bobby.cloner
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
