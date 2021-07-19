@@ -23,7 +23,6 @@ import BuildTypeDebug
 import BuildTypeRelease
 import ProductFlavorDevelop
 import ProductFlavorProduction
-import ProductFlavorQA
 import dependencies.Dependencies
 import extensions.addTestsDependencies
 import extensions.addCoroutineDependencies
@@ -59,17 +58,20 @@ android {
 
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
+
+            buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
         }
         getByName(BuildType.DEBUG) {
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
+
+            buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
         }
     }
 
     flavorDimensions(BuildProductDimensions.ENVIRONMENT)
     productFlavors {
         ProductFlavorDevelop.libraryCreate(this)
-        ProductFlavorQA.libraryCreate(this)
         ProductFlavorProduction.libraryCreate(this)
     }
 

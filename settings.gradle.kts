@@ -39,3 +39,4 @@ include(
 )
 
 rootProject.name = ("Cloner")
+include(":utils")

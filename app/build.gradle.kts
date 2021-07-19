@@ -15,7 +15,6 @@
  */
 
 import dependencies.Dependencies
-import extensions.addCoroutineDependencies
 import extensions.addKoinCoreDependencies
 import extensions.addTestsDependencies
 import extensions.implementation
@@ -64,7 +63,6 @@ android {
     flavorDimensions(BuildProductDimensions.ENVIRONMENT)
     productFlavors {
         ProductFlavorDevelop.appCreate(this)
-        ProductFlavorQA.appCreate(this)
         ProductFlavorProduction.appCreate(this)
     }
 
@@ -95,6 +93,8 @@ android {
 }
 
 dependencies {
+
+    implementation(project(BuildModules.CORE))
 
     implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.CONSTRAINT_LAYOUT)

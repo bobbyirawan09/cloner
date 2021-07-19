@@ -24,7 +24,6 @@ import BuildTypeDebug
 import BuildTypeRelease
 import ProductFlavorDevelop
 import ProductFlavorProduction
-import ProductFlavorQA
 import dependencies.Dependencies
 import extensions.addTestsDependencies
 import extensions.implementation
@@ -69,7 +68,6 @@ android {
     flavorDimensions(BuildProductDimensions.ENVIRONMENT)
     productFlavors {
         ProductFlavorDevelop.libraryCreate(this)
-        ProductFlavorQA.libraryCreate(this)
         ProductFlavorProduction.libraryCreate(this)
     }
 

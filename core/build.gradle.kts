@@ -20,7 +20,6 @@ import extensions.addNetworkDependencies
 plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
 }
-
 dependencies {
     addNetworkDependencies()
     addKoinCoreDependencies()

@@ -8,6 +8,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:name=".ClonerApplication"
         android:theme="@style/Theme.AndroidTemplate">
         <activity android:name="com.bobby.cloner.MainActivity">
             <intent-filter>

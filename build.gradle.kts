@@ -16,6 +16,7 @@
 
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import extensions.applyDefault
+import dependencies.DependencyVersions.KTLINT
 
 plugins {
     id(Plugins.DETEKT) version PluginVersions.DETEKT
@@ -47,7 +48,7 @@ allprojects {
 
     ktlint {
         debug.set(false)
-        version.set(DependencyVersions.KTLINT)
+        version.set(KTLINT)
         verbose.set(true)
         android.set(false)
         outputToConsole.set(true)
@@ -57,6 +58,11 @@ allprojects {
             exclude("**/generated/**")
             include("**/kotlin/**")
         }
+    }
+}
+buildscript {
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
     }
 }
 
