@@ -26,6 +26,7 @@ import ProductFlavorProduction
 import ProductFlavorQA
 import dependencies.Dependencies
 import extensions.addTestsDependencies
+import extensions.addCoroutineDependencies
 import extensions.implementation
 
 plugins {
@@ -109,4 +110,5 @@ dependencies {
     implementation(Dependencies.KOTLIN)
 
     addTestsDependencies()
+    addCoroutineDependencies()
 }

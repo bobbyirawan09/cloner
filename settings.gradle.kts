@@ -38,4 +38,4 @@ include(
     "library"
 )
 
-rootProject.name = ("AndroidTemplate")
+rootProject.name = ("Cloner")

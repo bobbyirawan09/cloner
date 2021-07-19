@@ -15,6 +15,8 @@
  */
 
 import dependencies.Dependencies
+import extensions.addCoroutineDependencies
+import extensions.addKoinCoreDependencies
 import extensions.addTestsDependencies
 import extensions.implementation
 
@@ -101,4 +103,5 @@ dependencies {
     implementation(Dependencies.MATERIAL)
 
     addTestsDependencies()
+    addKoinCoreDependencies()
 }

@@ -1,6 +1,13 @@
 /**
  * Configuration of all gradle build plugins
  */
+object PluginVersions {
+    const val DETEKT = "1.15.0"
+    const val DOKKA = "1.4.20"
+    const val KTLINT = "10.0.0"
+    const val VERSIONS_PLUGIN = "0.36.0"
+}
+
 object Plugins {
     const val ANDROID_APPLICATION = "com.android.application"
     const val ANDROID_DYNAMIC_FEATURE = "com.android.dynamic-feature"

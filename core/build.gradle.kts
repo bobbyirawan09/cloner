@@ -14,6 +14,14 @@
  * limitations under the License.
  */
 
+import extensions.addKoinCoreDependencies
+import extensions.addNetworkDependencies
+
 plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
+}
+
+dependencies {
+    addNetworkDependencies()
+    addKoinCoreDependencies()
 }

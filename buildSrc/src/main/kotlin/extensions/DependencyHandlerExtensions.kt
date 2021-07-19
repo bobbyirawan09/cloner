@@ -2,6 +2,7 @@ package extensions
 
 import dependencies.TestAndroidDependencies
 import dependencies.TestDependencies
+import dependencies.Dependencies
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
@@ -81,4 +82,25 @@ fun DependencyHandler.addTestsDependencies() {
  */
 fun DependencyHandler.addKotlinTestsDependencies() {
     testImplementation(TestDependencies.JUNIT)
+}
+
+fun DependencyHandler.addNetworkDependencies() {
+    implementation(Dependencies.RETROFIT)
+    implementation(Dependencies.RETROFIT_GSON_CONVERTER)
+    implementation(Dependencies.OKHTTP)
+}
+
+fun DependencyHandler.addCoroutineDependencies() {
+    implementation(Dependencies.COROUTINES_CORE)
+    implementation(Dependencies.COROUTINES_ANDROID)
+}
+
+fun DependencyHandler.addKoinCoreDependencies() {
+    implementation(Dependencies.KOIN_ANDROID)
+    implementation(Dependencies.KOIN_CORE)
+}
+
+fun DependencyHandler.addKoinCoreUIDependencies() {
+    addKoinCoreDependencies()
+    implementation(Dependencies.KOIN_ANDROID_VIEW_MODEL)
 }

@@ -2,7 +2,7 @@
  * Android Configuration Info
  */
 object AndroidConfig {
-    const val APPLICATION_ID = "com.v15h4l.template"
+    const val APPLICATION_ID = "com.bobby.cloner"
 
     const val COMPILE_SDK_VERSION = 30
     const val MIN_SDK_VERSION = 23
