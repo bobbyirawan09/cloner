@@ -115,5 +115,4 @@ dependencies {
     implementation(Dependencies.KOTLIN)
 
     addTestsDependencies()
-    addCoroutineDependencies()
 }

@@ -85,14 +85,14 @@ fun DependencyHandler.addKotlinTestsDependencies() {
 }
 
 fun DependencyHandler.addNetworkDependencies() {
-    implementation(Dependencies.RETROFIT)
+    api(Dependencies.RETROFIT)
     implementation(Dependencies.RETROFIT_GSON_CONVERTER)
     implementation(Dependencies.OKHTTP)
 }
 
 fun DependencyHandler.addCoroutineDependencies() {
-    implementation(Dependencies.COROUTINES_CORE)
-    implementation(Dependencies.COROUTINES_ANDROID)
+    api(Dependencies.COROUTINES_CORE)
+    api(Dependencies.COROUTINES_ANDROID)
 }
 
 fun DependencyHandler.addKoinCoreDependencies() {
@@ -103,4 +103,16 @@ fun DependencyHandler.addKoinCoreDependencies() {
 fun DependencyHandler.addKoinCoreUIDependencies() {
     addKoinCoreDependencies()
     implementation(Dependencies.KOIN_ANDROID_VIEW_MODEL)
+}
+
+fun DependencyHandler.addFeatureDependencies() {
+    implementation(Dependencies.CORE_KTX)
+    implementation(Dependencies.APPCOMPAT)
+    implementation(Dependencies.LEGACY_SUPPORT)
+    implementation(Dependencies.LIVE_DATA)
+    implementation(Dependencies.VIEW_MODEL)
+}
+
+fun DependencyHandler.addGlideDependencies() {
+    implementation(Dependencies.GLIDE_COMPILER)
 }

@@ -17,6 +17,8 @@
 import BuildModules.UTILS
 import extensions.addKoinCoreDependencies
 import extensions.addNetworkDependencies
+import dependencies.Dependencies.GSON
+import extensions.addCoroutineDependencies
 
 plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
@@ -24,6 +26,8 @@ plugins {
 dependencies {
     implementation(project(UTILS))
 
+    api(GSON)
+    addCoroutineDependencies()
     addNetworkDependencies()
     addKoinCoreDependencies()
 }

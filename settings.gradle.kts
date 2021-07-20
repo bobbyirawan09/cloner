@@ -40,3 +40,4 @@ include(
 
 rootProject.name = ("Cloner")
 include(":utils")
+include(":feature_category")
