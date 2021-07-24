@@ -1,4 +1,5 @@
 import BuildModules.CORE
+import BuildModules.UTILS
 import extensions.addCoroutineDependencies
 import extensions.addKoinCoreUIDependencies
 import extensions.addFeatureDependencies
@@ -9,6 +10,7 @@ plugins {
 }
 dependencies {
     implementation(project(CORE))
+    implementation(project(UTILS))
 
     addCoroutineDependencies()
     addFeatureDependencies()

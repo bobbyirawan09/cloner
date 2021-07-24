@@ -91,8 +91,8 @@ fun DependencyHandler.addNetworkDependencies() {
 }
 
 fun DependencyHandler.addCoroutineDependencies() {
-    api(Dependencies.COROUTINES_CORE)
-    api(Dependencies.COROUTINES_ANDROID)
+    implementation(Dependencies.COROUTINES_CORE)
+    implementation(Dependencies.COROUTINES_ANDROID)
 }
 
 fun DependencyHandler.addKoinCoreDependencies() {
