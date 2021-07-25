@@ -6,6 +6,6 @@ import com.bobby.cloner.feature_category.domain.model.Category
 import com.bobby.cloner.feature_category.domain.repository.CategoryRepository
 import kotlinx.coroutines.flow.Flow
 
-class GetCategoryUseCase(val repository: CategoryRepository): BaseUseCase<Flow<Resource<Category>>>() {
-    override suspend fun execute(): Flow<Resource<Category>> = repository.getCategories()
+class GetCategoryUseCase(val repository: CategoryRepository): BaseUseCase<Flow<Resource<List<Category>>>>() {
+    override suspend fun execute(): Flow<Resource<List<Category>>> = repository.getCategories()
 }
