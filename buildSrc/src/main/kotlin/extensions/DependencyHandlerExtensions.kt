@@ -114,5 +114,11 @@ fun DependencyHandler.addFeatureDependencies() {
 }
 
 fun DependencyHandler.addGlideDependencies() {
-    implementation(Dependencies.GLIDE_COMPILER)
+    implementation(Dependencies.GLIDE)
+    kapt(Dependencies.GLIDE_COMPILER)
+}
+
+fun DependencyHandler.addRoomDependencies() {
+    implementation(Dependencies.ROOM)
+    implementation(Dependencies.ROOM_KTX)
 }

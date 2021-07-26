@@ -22,6 +22,7 @@ import extensions.implementation
 
 plugins {
     id("kotlin")
+    kotlin("kapt")
 }
 
 java {

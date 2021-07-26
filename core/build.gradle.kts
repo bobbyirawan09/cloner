@@ -19,6 +19,7 @@ import extensions.addKoinCoreDependencies
 import extensions.addNetworkDependencies
 import dependencies.Dependencies.GSON
 import extensions.addCoroutineDependencies
+import extensions.addRoomDependencies
 
 plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
@@ -27,6 +28,7 @@ dependencies {
     implementation(project(UTILS))
 
     api(GSON)
+    addRoomDependencies()
     addCoroutineDependencies()
     addNetworkDependencies()
     addKoinCoreDependencies()

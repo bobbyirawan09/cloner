@@ -32,6 +32,7 @@ import extensions.getLocalProperty
 plugins {
     id("com.android.library")
     kotlin("android")
+    kotlin("kapt")
 }
 
 android {

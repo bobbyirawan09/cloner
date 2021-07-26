@@ -36,6 +36,9 @@ object DependencyVersions {
 
     //Gson
     const val GSON = "2.8.7"
+
+    //Room
+    const val ROOM = "2.3.0"
 }
 
 object Dependencies {
@@ -70,4 +73,9 @@ object Dependencies {
 
     //Gson
     const val GSON = "com.google.code.gson:gson:${DependencyVersions.GSON}"
+
+    //Room
+    const val ROOM_KTX = "androidx.room:room-ktx:${DependencyVersions.ROOM}"
+    const val ROOM = "androidx.room:room-runtime:${DependencyVersions.ROOM}"
+    const val ROOM_KAPT = "androidx.room:room-compiler:${DependencyVersions.ROOM}"
 }
