@@ -28,7 +28,6 @@ dependencies {
     implementation(project(UTILS))
 
     api(GSON)
-    addRoomDependencies()
     addCoroutineDependencies()
     addNetworkDependencies()
     addKoinCoreDependencies()

@@ -11,7 +11,7 @@ data class CategoryResponse(
     @SerializedName("country_whitelist")
     val countryWhitelist: List<String>? = listOf(),
     @SerializedName("parent_aliases")
-    val parentAliases: List<Any>? = listOf(),
+    val parentAliases: List<String>? = listOf(),
     @SerializedName("title")
     val title: String? = ""
 )

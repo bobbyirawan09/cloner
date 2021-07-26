@@ -121,4 +121,5 @@ fun DependencyHandler.addGlideDependencies() {
 fun DependencyHandler.addRoomDependencies() {
     implementation(Dependencies.ROOM)
     implementation(Dependencies.ROOM_KTX)
+    kapt(Dependencies.ROOM_KAPT)
 }
