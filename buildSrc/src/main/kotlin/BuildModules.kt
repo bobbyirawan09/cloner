@@ -6,4 +6,5 @@ object BuildModules {
     const val CORE = ":core"
     const val UTILS = ":utils"
     const val LIBRARY = ":library"
+    const val FEATURE_CATEGORY = ":feature_category"
 }

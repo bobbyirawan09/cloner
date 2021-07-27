@@ -95,6 +95,7 @@ android {
 dependencies {
 
     implementation(project(BuildModules.CORE))
+    implementation(project(BuildModules.FEATURE_CATEGORY))
 
     implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.CONSTRAINT_LAYOUT)

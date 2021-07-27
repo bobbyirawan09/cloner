@@ -1,4 +1,4 @@
-package com.bobby.cloner.feature_category.domain
+package com.bobby.cloner.feature_category.domain.usecase
 
 import com.bobby.cloner.core.data.Resource
 import com.bobby.cloner.core.domain.BaseUseCase
