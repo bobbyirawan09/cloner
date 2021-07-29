@@ -1,8 +1,8 @@
 package extensions
 
+import dependencies.Dependencies
 import dependencies.TestAndroidDependencies
 import dependencies.TestDependencies
-import dependencies.Dependencies
 import org.gradle.api.artifacts.Dependency
 import org.gradle.api.artifacts.dsl.DependencyHandler
 
@@ -122,4 +122,8 @@ fun DependencyHandler.addRoomDependencies() {
     implementation(Dependencies.ROOM)
     implementation(Dependencies.ROOM_KTX)
     kapt(Dependencies.ROOM_KAPT)
+}
+
+fun DependencyHandler.addPagingDependencies() {
+    implementation(Dependencies.PAGING)
 }

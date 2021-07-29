@@ -39,6 +39,9 @@ object DependencyVersions {
 
     //Room
     const val ROOM = "2.3.0"
+
+    //Paging
+    const val PAGING = "3.0.1"
 }
 
 object Dependencies {
@@ -78,4 +81,7 @@ object Dependencies {
     const val ROOM_KTX = "androidx.room:room-ktx:${DependencyVersions.ROOM}"
     const val ROOM = "androidx.room:room-runtime:${DependencyVersions.ROOM}"
     const val ROOM_KAPT = "androidx.room:room-compiler:${DependencyVersions.ROOM}"
+
+    //Paging
+    const val PAGING = "androidx.paging:paging-runtime:${DependencyVersions.PAGING}"
 }

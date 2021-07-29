@@ -12,4 +12,7 @@ object Constants {
     const val CATEGORY_COLUMN_TITLE = "title"
     const val CATEGORY_COLUMN_PARENT_ALIAS = "parent_alias"
     const val CATEGORY_DB_NAME = "Category.db"
+
+    const val BUSINESS_RESULT_STARTING_PAGE_INDEX = 0
+    const val NETWORK_PAGE_SIZE = 20
 }
