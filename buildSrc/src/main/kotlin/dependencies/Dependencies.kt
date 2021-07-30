@@ -8,7 +8,7 @@ object DependencyVersions {
     const val APPCOMPAT = "1.3.0"
     const val CONSTRAINT_LAYOUT = "2.0.4"
     const val CORE_KTX = "1.3.2"
-    const val KOTLIN = "1.5.10"
+    const val KOTLIN = "1.5.20"
     const val KTLINT = "0.40.0"
     const val MATERIAL = "1.2.1"
     const val LEGACY_SUPPORT = "1.0.0"
@@ -23,7 +23,7 @@ object DependencyVersions {
     const val OKHTTP = "4.9.0"
 
     //Coroutine
-    const val COROUTINE = "1.4.3"
+    const val COROUTINE = "1.5.0"
 
     //Koin
     const val KOIN = "2.1.6"

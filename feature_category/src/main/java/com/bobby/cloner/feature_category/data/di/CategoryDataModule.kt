@@ -16,7 +16,7 @@ import retrofit2.Retrofit
 
 val categoryDataModule = module {
     single<CategoryRepository> {
-        CategoryRepositoryImpl(get())
+        CategoryRepositoryImpl(get(), get())
     }
 
     single<CategoryService> {

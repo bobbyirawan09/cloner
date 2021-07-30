@@ -111,6 +111,8 @@ fun DependencyHandler.addFeatureDependencies() {
     implementation(Dependencies.LEGACY_SUPPORT)
     implementation(Dependencies.LIVE_DATA)
     implementation(Dependencies.VIEW_MODEL)
+    implementation(Dependencies.CONSTRAINT_LAYOUT)
+    implementation(Dependencies.MATERIAL)
 }
 
 fun DependencyHandler.addGlideDependencies() {

@@ -110,6 +110,10 @@ android {
         unitTests.isIncludeAndroidResources = true
         unitTests.isReturnDefaultValues = true
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
