@@ -9,7 +9,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.paging.LoadState
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
-import com.bobby.cloner.feature_business.R
 import com.bobby.cloner.feature_business.databinding.FragmentBusinessBinding
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
@@ -20,6 +19,8 @@ class BusinessFragment : Fragment() {
 
     private var _binding: FragmentBusinessBinding? = null
     private val binding get() = _binding!!
+
+    private val adapter by lazy { BusinessAdapter() }
 
     @ExperimentalCoroutinesApi
     private val viewModel: BusinessViewModel by viewModel()
@@ -59,11 +60,10 @@ class BusinessFragment : Fragment() {
         uiState: StateFlow<UiState>,
         uiActions: (UiAction) -> Unit
     ) {
-        val repoAdapter = BusinessAdapter()
-        rvBusiness.adapter = repoAdapter
+        rvBusiness.adapter = adapter
 
         bindList(
-            businessAdapter = repoAdapter,
+            businessAdapter = adapter,
             uiState = uiState,
             onScrollChanged = uiActions
         )
@@ -91,9 +91,8 @@ class BusinessFragment : Fragment() {
 
         val shouldScrollToTop = combine(
             notLoading,
-            hasNotScrolledForCurrentSearch,
-            Boolean::and
-        )
+            hasNotScrolledForCurrentSearch
+        ) { b, other -> b.and(other) }
             .distinctUntilChanged()
 
         val pagingData = uiState
@@ -112,6 +111,10 @@ class BusinessFragment : Fragment() {
                     if (shouldScroll) rvBusiness.scrollToPosition(0)
                 }
         }
+    }
+
+    companion object {
+        fun newInstance() = BusinessFragment()
     }
 
 }

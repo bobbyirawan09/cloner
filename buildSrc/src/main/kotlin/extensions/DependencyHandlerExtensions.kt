@@ -113,6 +113,7 @@ fun DependencyHandler.addFeatureDependencies() {
     implementation(Dependencies.VIEW_MODEL)
     implementation(Dependencies.CONSTRAINT_LAYOUT)
     implementation(Dependencies.MATERIAL)
+    implementation(Dependencies.CHUCKER)
 }
 
 fun DependencyHandler.addGlideDependencies() {

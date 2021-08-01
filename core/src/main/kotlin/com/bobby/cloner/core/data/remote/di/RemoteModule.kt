@@ -23,7 +23,7 @@ val remoteModule = module {
         Retrofit.Builder()
             .baseUrl("https://tourism-api.dicoding.dev/")
             .addConverterFactory(GsonConverterFactory.create())
-            .client(get())
+            .client(get(named(YELP_CLIENT)))
             .build()
     }
 }

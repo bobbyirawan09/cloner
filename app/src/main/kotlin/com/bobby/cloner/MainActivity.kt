@@ -18,13 +18,24 @@ package com.bobby.cloner
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bobby.cloner.databinding.ActivityMainBinding
+import com.bobby.cloner.feature_business.presentation.BusinessFragment
 
 /**
  * Entry point for the Application.
  */
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        supportFragmentManager.beginTransaction()
+            .add(R.id.fragment_tag, BusinessFragment.newInstance())
+            .commit()
+
     }
 }

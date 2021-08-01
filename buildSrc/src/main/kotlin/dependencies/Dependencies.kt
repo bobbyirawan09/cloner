@@ -42,6 +42,9 @@ object DependencyVersions {
 
     //Paging
     const val PAGING = "3.0.1"
+
+    //Chucker
+    const val CHUCKER = "3.4.0"
 }
 
 object Dependencies {
@@ -84,4 +87,7 @@ object Dependencies {
 
     //Paging
     const val PAGING = "androidx.paging:paging-runtime:${DependencyVersions.PAGING}"
+
+    //Chucker
+    const val CHUCKER = "com.github.chuckerteam.chucker:library:${DependencyVersions.CHUCKER}"
 }

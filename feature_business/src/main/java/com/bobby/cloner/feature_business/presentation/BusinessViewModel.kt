@@ -1,17 +1,17 @@
 package com.bobby.cloner.feature_business.presentation
 
-import androidx.lifecycle.*
+import androidx.lifecycle.SavedStateHandle
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import com.bobby.cloner.feature_business.domain.model.Business
 import com.bobby.cloner.feature_business.domain.usecase.GetBusinessUseCase
 import com.bobby.cloner.utils.Constants.LAST_QUERY_SCROLLED
 import com.bobby.cloner.utils.Constants.LAST_SEARCH_QUERY
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-@ExperimentalCoroutinesApi
 class BusinessViewModel(private val getBusinessUseCase: GetBusinessUseCase, private val savedStateHandle: SavedStateHandle) : ViewModel() {
 
     val state: StateFlow<UiState>
