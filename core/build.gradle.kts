@@ -15,19 +15,19 @@
  */
 
 import BuildModules.UTILS
-import extensions.addKoinCoreDependencies
-import extensions.addNetworkDependencies
 import dependencies.Dependencies.GSON
-import extensions.addCoroutineDependencies
-import extensions.addRoomDependencies
+import extensions.*
+import org.gradle.kotlin.dsl.api
 
 plugins {
     id(Plugins.COMMON_ANDROID_LIBRARY)
 }
 dependencies {
+    addFeatureDependencies()
     implementation(project(UTILS))
 
     api(GSON)
+    addGlideDependencies()
     addCoroutineDependencies()
     addNetworkDependencies()
     addKoinCoreDependencies()

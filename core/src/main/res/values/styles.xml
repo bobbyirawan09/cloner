@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomStarRating" parent="Widget.AppCompat.RatingBar">
+        <item name="android:progressDrawable">@drawable/custom_star_rating</item>
+        <item name="android:minHeight">15dip</item>
+        <item name="android:maxHeight">30dip</item>
+    </style>
+
+    <style name="BaseText" parent="android:TextAppearance">
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="Title" parent="BaseText">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="Subtitle" parent="BaseText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Subtitle.Bold" parent="Subtitle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Body1" parent="BaseText">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Body1.Bold" parent="Body1">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Body1.White" parent="Body1">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Body2" parent="BaseText">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Body2.White" parent="Body2">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Body2.Bold" parent="Body2">
+        <item name="android:textStyle">bold</item>
+    </style>
+</resources>

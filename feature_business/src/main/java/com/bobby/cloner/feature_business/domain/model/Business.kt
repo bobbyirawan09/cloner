@@ -8,10 +8,10 @@ data class Business(
     val phone: String,
     val id: String,
     val isClosed: Boolean,
-    val category: List<BusinessCategory>,
-    val reviewCount: Int,
+    val category: String,
+    val reviewCount: String,
     val name: String,
     val imageUrl: String,
-    val displayAddress: String,
-    val distance: Double
+    val address: String,
+    val distance: String
 )

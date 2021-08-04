@@ -16,17 +16,21 @@ object DataMapper {
             )
         }.orEmpty()
         val displayAddress = response?.location?.displayAddress?.joinToString(", ").orEmpty()
+        val displayCategory = categories.joinToString(separator = ", ") {
+            it.title
+        }
+        val displayDistance = String.format("%.2f", response?.distance.orZero())
         return Business(
             response?.rating.orZero(),
             response?.phone.orEmpty(),
             response?.id.orEmpty(),
             response?.isClosed.orFalse(),
-            categories,
-            response?.reviewCount.orZero(),
+            displayCategory,
+            response?.reviewCount.orZero().toString(),
             response?.name.orEmpty(),
             response?.imageUrl.orEmpty(),
             displayAddress,
-            response?.distance.orZero()
+            displayDistance
         )
     }
 }

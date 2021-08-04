@@ -1,14 +1,16 @@
 package com.bobby.cloner.feature_business.presentation
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.bobby.cloner.core.presentation.utils.loadUrlWithRoundedCorner
 import com.bobby.cloner.feature_business.databinding.ItemBusinessBinding
 import com.bobby.cloner.feature_business.domain.model.Business
 import com.bobby.cloner.feature_business.presentation.BusinessAdapter.BusinessViewHolder
+import com.bobby.cloner.utils.orZero
+
 
 /**
  * Created by Bobby Irawan on 30/07/21.
@@ -23,13 +25,26 @@ class BusinessAdapter :
         parent: ViewGroup,
         viewType: Int
     ): BusinessViewHolder {
-        val binding = ItemBusinessBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding = ItemBusinessBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
         return BusinessViewHolder(binding)
     }
 
-    class BusinessViewHolder(private val binding: ItemBusinessBinding) : RecyclerView.ViewHolder(binding.root) {
+    class BusinessViewHolder(private val binding: ItemBusinessBinding) : RecyclerView.ViewHolder(
+        binding.root
+    ) {
         fun bind(business: Business?) {
-
+            binding.tvName.text = business?.name
+            binding.tvAddress.text = business?.address
+            binding.rbTotalReview.numStars = business?.rating?.toInt().orZero()
+            binding.tvReviewCount.text = business?.reviewCount.orEmpty()
+            binding.tvCategories.text = business?.category
+            binding.tvDistance.text = business?.distance
+            val url = business?.imageUrl.orEmpty()
+            binding.ivBusinessImage.loadUrlWithRoundedCorner(itemView.context, url)
         }
     }
 
