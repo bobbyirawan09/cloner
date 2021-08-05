@@ -30,4 +30,6 @@ object Plugins {
     const val KTLINT = "org.jlleitschuh.gradle.ktlint"
     const val SPOTLESS = "plugins.spotless"
     const val UPDATE_DEPENDENCIES = "com.github.ben-manes.versions"
+
+    const val NAVIGATION_SAFE_ARGS = "androidx.navigation.safeargs.kotlin"
 }

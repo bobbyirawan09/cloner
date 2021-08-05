@@ -130,3 +130,8 @@ fun DependencyHandler.addRoomDependencies() {
 fun DependencyHandler.addPagingDependencies() {
     implementation(Dependencies.PAGING)
 }
+
+fun DependencyHandler.addNavigationDependencies() {
+    implementation(Dependencies.NAVIGATION)
+    implementation(Dependencies.NAVIGATION_UI)
+}

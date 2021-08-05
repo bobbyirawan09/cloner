@@ -18,8 +18,8 @@ package com.bobby.cloner
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.NavHostFragment
 import com.bobby.cloner.databinding.ActivityMainBinding
-import com.bobby.cloner.feature_business.presentation.BusinessFragment
 
 /**
  * Entry point for the Application.
@@ -33,9 +33,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction()
-            .add(R.id.fragment_tag, BusinessFragment.newInstance())
-            .commit()
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment
+        val navController = navHostFragment.navController
 
     }
 }

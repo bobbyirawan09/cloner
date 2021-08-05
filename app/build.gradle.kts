@@ -16,12 +16,14 @@
 
 import dependencies.Dependencies
 import extensions.addKoinCoreDependencies
+import extensions.addNavigationDependencies
 import extensions.addTestsDependencies
 import extensions.implementation
 
 plugins {
     id(Plugins.ANDROID_APPLICATION)
     kotlin(Plugins.KOTLIN_ANDROID)
+    id("kotlin-android")
 }
 
 android {
@@ -103,7 +105,10 @@ dependencies {
     implementation(Dependencies.CORE_KTX)
     implementation(Dependencies.KOTLIN)
     implementation(Dependencies.MATERIAL)
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     addTestsDependencies()
     addKoinCoreDependencies()
+    addNavigationDependencies()
 }

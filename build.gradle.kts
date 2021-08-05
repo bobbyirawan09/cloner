@@ -14,7 +14,6 @@
  * limitations under the License.
  */
 
-import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import dependencies.DependencyVersions.KTLINT
 import extensions.applyDefault
 
@@ -67,7 +66,7 @@ buildscript {
     }
 }
 
-tasks.withType<DependencyUpdatesTask> {
+tasks.withType<com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask> {
     rejectVersionIf {
         isNonStable(candidate.version)
     }

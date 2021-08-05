@@ -12,12 +12,15 @@
         android:layout_height="0dp"
         android:paddingVertical="4dp"
         android:scrollbars="vertical"
+        android:clipToPadding="false"
         app:layoutManager="LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="UnusedAttribute"/>
+        tools:itemCount="3"
+        tools:listitem="@layout/item_business"
+        tools:ignore="UnusedAttribute" />
 
     <TextView android:id="@+id/emptyList"
         android:layout_width="0dp"

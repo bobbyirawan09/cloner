@@ -1,4 +1,5 @@
 package dependencies
+
 /**
  * All the Project dependencies are declared here.
  * These can be used across the Project
@@ -45,6 +46,9 @@ object DependencyVersions {
 
     //Chucker
     const val CHUCKER = "3.4.0"
+
+    //Navigation
+    const val NAVIGATION = "2.3.5"
 }
 
 object Dependencies {
@@ -90,4 +94,10 @@ object Dependencies {
 
     //Chucker
     const val CHUCKER = "com.github.chuckerteam.chucker:library:${DependencyVersions.CHUCKER}"
+
+    //Navigation
+    const val NAVIGATION =
+        "androidx.navigation:navigation-fragment-ktx:${DependencyVersions.NAVIGATION}"
+    const val NAVIGATION_UI =
+        "androidx.navigation:navigation-ui-ktx:${DependencyVersions.NAVIGATION}"
 }

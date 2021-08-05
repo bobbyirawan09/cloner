@@ -1,4 +1,4 @@
-package com.bobby.cloner.feature_business.presentation
+package com.bobby.cloner.feature_business.presentation.business
 
 import android.os.Bundle
 import android.view.LayoutInflater

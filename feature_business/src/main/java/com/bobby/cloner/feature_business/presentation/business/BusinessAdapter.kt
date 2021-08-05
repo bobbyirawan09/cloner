@@ -1,4 +1,4 @@
-package com.bobby.cloner.feature_business.presentation
+package com.bobby.cloner.feature_business.presentation.business
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bobby.cloner.core.presentation.utils.loadUrlWithRoundedCorner
 import com.bobby.cloner.feature_business.databinding.ItemBusinessBinding
 import com.bobby.cloner.feature_business.domain.model.Business
-import com.bobby.cloner.feature_business.presentation.BusinessAdapter.BusinessViewHolder
+import com.bobby.cloner.feature_business.presentation.business.BusinessAdapter.BusinessViewHolder
 import com.bobby.cloner.utils.orZero
 
 
