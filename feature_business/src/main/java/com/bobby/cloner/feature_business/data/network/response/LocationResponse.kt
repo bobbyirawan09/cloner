@@ -14,6 +14,8 @@ data class LocationResponse(
     val city: String? = null,
     @SerializedName("country")
     val country: String? = null,
+    @SerializedName("cross_streets")
+    val crossStreets: String? = null,
     @SerializedName("display_address")
     val displayAddress: List<String>? = null,
     @SerializedName("state")
