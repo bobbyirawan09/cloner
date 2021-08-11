@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="feature_business/src/main/res/layout/fragment_business.xml" value="0.1644021739130435" />
+        <entry key="feature_business/src/main/res/layout/fragment_business_detail.xml" value="0.45" />
         <entry key="feature_business/src/main/res/layout/item_business.xml" value="0.1" />
+        <entry key="feature_business/src/main/res/layout/item_photo.xml" value="0.625" />
+        <entry key="feature_business/src/main/res/layout/layout_business_photos.xml" value="0.5" />
+        <entry key="feature_business/src/main/res/layout/layout_business_working_hours.xml" value="0.2864583333333333" />
       </map>
     </option>
   </component>

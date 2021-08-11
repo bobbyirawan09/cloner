@@ -2,4 +2,14 @@
 <resources>
     <string name="preview_image">preview image</string>
     <string name="point_symbol">•</string>
+    <string name="title_business_photos">Business Photos</string>
+    <string name="image_content_description">image here</string>
+    <string name="title_working_hours">Working Hours</string>
+    <string name="title_monday">Monday</string>
+    <string name="title_sunday">Sunday</string>
+    <string name="title_saturday">Saturday</string>
+    <string name="title_friday">Friday</string>
+    <string name="title_thursday">Thursday</string>
+    <string name="title_wednesday">Wednesday</string>
+    <string name="title_tuesday">Tuesday</string>
 </resources>
