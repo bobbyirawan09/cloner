@@ -1,6 +1,5 @@
 package com.bobby.cloner.feature_business.data.di
 
-import com.bobby.cloner.feature_business.data.BusinessPagingSource
 import com.bobby.cloner.feature_business.data.BusinessRepositoryImpl
 import com.bobby.cloner.feature_business.data.network.RemoteDataSource
 import com.bobby.cloner.feature_business.data.network.service.BusinessService
@@ -12,7 +11,7 @@ import retrofit2.Retrofit
 
 val businessDataModule = module {
     single<BusinessRepository> {
-        BusinessRepositoryImpl(get(), get())
+        BusinessRepositoryImpl(get())
     }
 
     single<BusinessService> {
@@ -23,7 +22,7 @@ val businessDataModule = module {
         RemoteDataSource(get())
     }
 
-    single {
-        BusinessPagingSource(get())
-    }
+//    single {
+//        BusinessPagingSource(get())
+//    }
 }

@@ -14,7 +14,7 @@ object Constants {
     const val CATEGORY_DB_NAME = "Category.db"
 
     const val BUSINESS_RESULT_STARTING_PAGE_INDEX = 0
-    const val NETWORK_PAGE_SIZE = 20
+    const val NETWORK_PAGE_SIZE = 5
 
     const val LAST_QUERY_SCROLLED: String = "last_query_scrolled"
     const val LAST_SEARCH_QUERY: String = "last_search_query"

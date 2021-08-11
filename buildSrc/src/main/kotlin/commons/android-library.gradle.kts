@@ -25,9 +25,8 @@ import ProductFlavorDevelop
 import ProductFlavorProduction
 import dependencies.Dependencies
 import extensions.addTestsDependencies
-import extensions.addCoroutineDependencies
-import extensions.implementation
 import extensions.getLocalProperty
+import extensions.implementation
 
 plugins {
     id("com.android.library")
@@ -61,15 +60,15 @@ android {
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
 
-            buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
-            buildConfigField("String","YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
+            buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
+            buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
         }
         getByName(BuildType.DEBUG) {
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
 
-            buildConfigField("String","BASE_URL", "\"https://api.yelp.com/v3\"")
-            buildConfigField("String","YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
+            buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
+            buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
         }
     }
 

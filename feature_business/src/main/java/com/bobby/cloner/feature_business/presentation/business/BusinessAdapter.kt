@@ -2,8 +2,8 @@ package com.bobby.cloner.feature_business.presentation.business
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bobby.cloner.core.presentation.utils.loadUrlWithRoundedCorner
 import com.bobby.cloner.feature_business.databinding.ItemBusinessBinding
@@ -16,7 +16,7 @@ import com.bobby.cloner.utils.orZero
  * Created by Bobby Irawan on 30/07/21.
  */
 class BusinessAdapter :
-    PagingDataAdapter<Business, BusinessViewHolder>(BusinessComparator) {
+    ListAdapter<Business, BusinessViewHolder>(BusinessComparator()) {
     override fun onBindViewHolder(holder: BusinessViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
@@ -48,7 +48,7 @@ class BusinessAdapter :
         }
     }
 
-    object BusinessComparator : DiffUtil.ItemCallback<Business>() {
+    class BusinessComparator : DiffUtil.ItemCallback<Business>() {
         override fun areItemsTheSame(oldItem: Business, newItem: Business): Boolean =
             oldItem.id == newItem.id
 
