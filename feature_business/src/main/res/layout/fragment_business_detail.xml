@@ -7,6 +7,12 @@
     android:layout_marginHorizontal="8dp"
     tools:context=".presentation.businessdetail.BusinessDetailFragment">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fcv_map_location"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <include
         android:id="@+id/include_business_photos"
         layout="@layout/layout_business_photos"

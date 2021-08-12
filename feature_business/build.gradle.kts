@@ -14,6 +14,9 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.3.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.3.5")
+    implementation("com.google.maps.android:maps-ktx:2.3.0")
+    implementation("com.google.maps.android:maps-utils-ktx:2.3.0")
+    implementation("com.google.android.gms:play-services-maps:17.0.1")
 
 //    addRoomDependencies()
     addCoroutineDependencies()

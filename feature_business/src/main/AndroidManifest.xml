@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.bobby.cloner.feature_business">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.bobby.cloner.feature_business">
 
+    <application>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}"
+            tools:node="merge" />
+    </application>
 </manifest>

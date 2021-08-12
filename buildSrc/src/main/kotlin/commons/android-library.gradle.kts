@@ -60,12 +60,16 @@ android {
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeRelease.isTestCoverageEnabled
 
+            manifestPlaceholders["MAPS_API_KEY"] = getLocalProperty("MAPS_API_KEY")
+
             buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
             buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
         }
         getByName(BuildType.DEBUG) {
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
             isTestCoverageEnabled = BuildTypeDebug.isTestCoverageEnabled
+
+            manifestPlaceholders["MAPS_API_KEY"] = getLocalProperty("MAPS_API_KEY")
 
             buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
             buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
