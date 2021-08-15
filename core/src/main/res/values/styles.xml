@@ -15,6 +15,10 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="Title.Bold" parent="Title">
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="Subtitle" parent="BaseText">
         <item name="android:textSize">16sp</item>
     </style>

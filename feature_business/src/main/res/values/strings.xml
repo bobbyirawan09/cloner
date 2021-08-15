@@ -12,4 +12,6 @@
     <string name="title_thursday">Thursday</string>
     <string name="title_wednesday">Wednesday</string>
     <string name="title_tuesday">Tuesday</string>
+    <string name="title_location">Location</string>
+    <string name="title_get_directions">Get Directions</string>
 </resources>
