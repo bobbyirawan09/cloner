@@ -64,6 +64,21 @@ android {
 
             buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
             buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
+            buildConfigField(
+                "String",
+                "SKY_SCANNER_BASE_URL",
+                "\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/\""
+            )
+            buildConfigField(
+                "String",
+                "SKY_SCANNER_API_KEY",
+                getLocalProperty("SKY_SCANNER_API_KEY")
+            )
+            buildConfigField(
+                "String",
+                "SKY_SCANNER_API_HOST",
+                getLocalProperty("SKY_SCANNER_API_HOST")
+            )
         }
         getByName(BuildType.DEBUG) {
             isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
@@ -72,7 +87,22 @@ android {
             manifestPlaceholders["MAPS_API_KEY"] = getLocalProperty("MAPS_API_KEY")
 
             buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
-            buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
+            buildConfigField(
+                "String",
+                "YELP_API_KEY",
+                "\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/\""
+            )
+            buildConfigField("String", "SKY_SCANNER_BASE_URL", getLocalProperty("YELP_API_KEY"))
+            buildConfigField(
+                "String",
+                "SKY_SCANNER_API_KEY",
+                getLocalProperty("SKY_SCANNER_API_KEY")
+            )
+            buildConfigField(
+                "String",
+                "SKY_SCANNER_API_HOST",
+                getLocalProperty("SKY_SCANNER_API_HOST")
+            )
         }
     }
 
