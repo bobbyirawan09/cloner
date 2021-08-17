@@ -24,6 +24,7 @@ plugins {
     id(Plugins.ANDROID_APPLICATION)
     kotlin(Plugins.KOTLIN_ANDROID)
     id("kotlin-android")
+    id("androidx.navigation.safeargs.kotlin")
 }
 
 android {

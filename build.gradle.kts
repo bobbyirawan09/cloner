@@ -63,6 +63,7 @@ buildscript {
     val kotlin_version by extra("1.4.32")
     dependencies {
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.21")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.3.5")
     }
 }
 

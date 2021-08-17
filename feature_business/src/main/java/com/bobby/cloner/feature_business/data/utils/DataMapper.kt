@@ -22,7 +22,8 @@ object DataMapper {
             response?.name.orEmpty(),
             response?.imageUrl.orEmpty(),
             displayAddress,
-            displayDistance
+            displayDistance,
+            response?.price.orEmpty()
         )
     }
 

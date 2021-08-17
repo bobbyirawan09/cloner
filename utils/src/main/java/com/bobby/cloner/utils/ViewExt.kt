@@ -9,3 +9,7 @@ fun View.setVisible() {
 fun View.setGone() {
     visibility = View.GONE
 }
+
+fun View.showIf(condition: Boolean) {
+    if (condition) this.setVisible() else this.setGone()
+}

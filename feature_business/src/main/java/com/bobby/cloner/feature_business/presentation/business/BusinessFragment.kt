@@ -20,14 +20,19 @@ class BusinessFragment : Fragment(R.layout.fragment_business) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setupView()
+        setupObserver()
 
+        viewModel.getBusinesses()
+    }
+
+    private fun setupView() {
         val decoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         binding.rvBusiness.addItemDecoration(decoration)
         binding.rvBusiness.layoutManager = LinearLayoutManager(requireContext())
         binding.rvBusiness.adapter = adapter
-        setupObserver()
 
-        viewModel.getBusinesses()
+        requireActivity().actionBar?.title = "Testing"
     }
 
     private fun setupObserver() {

@@ -1,6 +1,7 @@
 package com.bobby.cloner.feature_business.presentation
 
 import com.bobby.cloner.feature_business.presentation.business.BusinessViewModel
+import com.bobby.cloner.feature_business.presentation.businessdetail.BusinessDetailViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -10,5 +11,8 @@ import org.koin.dsl.module
 val businessPresentationModule = module {
     viewModel {
         BusinessViewModel(get())
+    }
+    viewModel {
+        BusinessDetailViewModel(get())
     }
 }

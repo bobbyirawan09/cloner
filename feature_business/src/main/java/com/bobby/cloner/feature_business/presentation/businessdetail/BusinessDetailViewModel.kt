@@ -14,15 +14,15 @@ import kotlinx.coroutines.launch
 
 class BusinessDetailViewModel(private val useCase: GetBusinessDetailsUseCase) : ViewModel() {
 
-    private var _businessDetail = MutableLiveData<BusinessDetail>()
-    val businessDetail = _businessDetail as LiveData<BusinessDetail>
+    private var _businessDetail = MutableLiveData<BusinessDetail?>()
+    val businessDetail = _businessDetail as LiveData<BusinessDetail?>
 
     private var _locationMap = MutableLiveData<Pair<String, LatLng>>()
     val locationMap = _locationMap as LiveData<Pair<String, LatLng>>
 
-    fun getBusinessDetail() {
+    fun getBusinessDetail(businessId: String) {
         viewModelScope.launch {
-            useCase.getBusinessDetail("").collect {
+            useCase.getBusinessDetail(businessId).collect {
                 when (it) {
                     is Resource.Error -> {
                     }
@@ -35,6 +35,7 @@ class BusinessDetailViewModel(private val useCase: GetBusinessDetailsUseCase) : 
                             result?.coordinates?.longitude.orZero()
                         )
                         _locationMap.value = Pair(result?.name.orEmpty(), latLng)
+                        _businessDetail.value = result
                     }
                     is Resource.SuccessButEmpty -> {
 //                        _businesses.value = it.data

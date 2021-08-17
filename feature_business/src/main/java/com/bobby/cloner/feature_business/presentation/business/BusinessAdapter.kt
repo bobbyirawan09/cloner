@@ -9,7 +9,9 @@ import com.bobby.cloner.core.presentation.utils.loadUrlWithRoundedCorner
 import com.bobby.cloner.feature_business.databinding.ItemBusinessBinding
 import com.bobby.cloner.feature_business.domain.model.Business
 import com.bobby.cloner.feature_business.presentation.business.BusinessAdapter.BusinessViewHolder
+import com.bobby.cloner.utils.orFalse
 import com.bobby.cloner.utils.orZero
+import com.bobby.cloner.utils.showIf
 
 
 /**
@@ -18,7 +20,7 @@ import com.bobby.cloner.utils.orZero
 class BusinessAdapter :
     ListAdapter<Business, BusinessViewHolder>(BusinessComparator()) {
     override fun onBindViewHolder(holder: BusinessViewHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), position + 1)
     }
 
     override fun onCreateViewHolder(
@@ -36,15 +38,17 @@ class BusinessAdapter :
     class BusinessViewHolder(private val binding: ItemBusinessBinding) : RecyclerView.ViewHolder(
         binding.root
     ) {
-        fun bind(business: Business?) {
-            binding.tvName.text = business?.name
+        fun bind(business: Business?, position: Int) {
+            binding.tvName.text = "$position. ${business?.name}"
             binding.tvAddress.text = business?.address
-            binding.rbTotalReview.numStars = business?.rating?.toInt().orZero()
+            binding.rbTotalReview.rating = business?.rating?.toFloat().orZero()
             binding.tvReviewCount.text = business?.reviewCount.orEmpty()
             binding.tvCategories.text = business?.category
-            binding.tvDistance.text = business?.distance
+            binding.tvDistance.text = business?.distance + " mi"
             val url = business?.imageUrl.orEmpty()
             binding.ivBusinessImage.loadUrlWithRoundedCorner(itemView.context, url)
+            binding.groupPrice.showIf(business?.price?.isNotEmpty().orFalse())
+            binding.tvPrice.text = business?.price
         }
     }
 

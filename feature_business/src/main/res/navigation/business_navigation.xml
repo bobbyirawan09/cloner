@@ -8,6 +8,19 @@
     <fragment
         android:id="@+id/businessFragment"
         android:name="com.bobby.cloner.feature_business.presentation.business.BusinessFragment"
-        android:label="BusinessFragment"
-        tools:layout="@layout/fragment_business" />
+        android:label="Search Result"
+        tools:layout="@layout/fragment_business">
+        <action
+            android:id="@+id/action_businessFragment_to_businessDetailFragment"
+            app:destination="@id/businessDetailFragment">
+            <argument
+                android:name="businessId"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/businessDetailFragment"
+        android:name="com.bobby.cloner.feature_business.presentation.businessdetail.BusinessDetailFragment"
+        android:label="Business Detail"
+        tools:layout="@layout/fragment_business_detail" />
 </navigation>

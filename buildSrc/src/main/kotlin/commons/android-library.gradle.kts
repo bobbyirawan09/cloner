@@ -50,7 +50,6 @@ android {
 
     buildFeatures {
         viewBinding = AndroidConfig.VIEW_BINDING_ENABLED
-        dataBinding = AndroidConfig.DATA_BINDING_ENABLED
     }
 
     buildTypes {
@@ -87,12 +86,12 @@ android {
             manifestPlaceholders["MAPS_API_KEY"] = getLocalProperty("MAPS_API_KEY")
 
             buildConfigField("String", "YELP_BASE_URL", "\"https://api.yelp.com/v3/\"")
+            buildConfigField("String", "YELP_API_KEY", getLocalProperty("YELP_API_KEY"))
             buildConfigField(
                 "String",
-                "YELP_API_KEY",
+                "SKY_SCANNER_BASE_URL",
                 "\"https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/autosuggest/v1.0/\""
             )
-            buildConfigField("String", "SKY_SCANNER_BASE_URL", getLocalProperty("YELP_API_KEY"))
             buildConfigField(
                 "String",
                 "SKY_SCANNER_API_KEY",

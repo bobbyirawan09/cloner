@@ -13,5 +13,6 @@ data class Business(
     val name: String,
     val imageUrl: String,
     val address: String,
-    val distance: String
+    val distance: String,
+    val price: String
 )
