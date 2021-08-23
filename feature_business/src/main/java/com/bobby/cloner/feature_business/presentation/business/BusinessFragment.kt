@@ -8,6 +8,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.bobby.cloner.core.presentation.utils.viewBinding
 import com.bobby.cloner.feature_business.R
 import com.bobby.cloner.feature_business.databinding.FragmentBusinessBinding
+import com.bobby.cloner.utils.setGone
+import com.bobby.cloner.utils.setVisible
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class BusinessFragment : Fragment(R.layout.fragment_business) {
@@ -26,6 +28,16 @@ class BusinessFragment : Fragment(R.layout.fragment_business) {
         viewModel.getBusinesses()
     }
 
+    override fun onResume() {
+        super.onResume()
+        binding.shimmerPlaceholderResult.startShimmer()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.shimmerPlaceholderResult.stopShimmer()
+    }
+
     private fun setupView() {
         val decoration = DividerItemDecoration(requireContext(), DividerItemDecoration.VERTICAL)
         binding.rvBusiness.addItemDecoration(decoration)
@@ -38,6 +50,15 @@ class BusinessFragment : Fragment(R.layout.fragment_business) {
     private fun setupObserver() {
         viewModel.businesses.observe(viewLifecycleOwner) { result ->
             adapter.submitList(result)
+
+            binding.shimmerPlaceholderResult.stopShimmer()
+            binding.shimmerPlaceholderResult.setGone()
+            binding.rvBusiness.setVisible()
+        }
+
+        viewModel.error.observe(viewLifecycleOwner) {
+            binding.shimmerPlaceholderResult.stopShimmer()
+            binding.shimmerPlaceholderResult.setGone()
         }
     }
 

@@ -15,13 +15,21 @@ class BusinessViewModel(private val getBusinessUseCase: GetBusinessUseCase) : Vi
     private var _businesses = MutableLiveData<List<Business>?>()
     val businesses = _businesses as LiveData<List<Business>?>
 
+    private var _loading = MutableLiveData<Boolean>()
+    val loading = _loading as LiveData<Boolean>
+
+    private var _error = MutableLiveData<String>()
+    val error = _error as LiveData<String>
+
     fun getBusinesses() {
         viewModelScope.launch {
             getBusinessUseCase.getBusinesses().collect {
                 when (it) {
                     is Resource.Error -> {
+                        _error.value = it.message.orEmpty()
                     }
                     is Resource.Loading -> {
+                        _loading.value = true
                     }
                     is Resource.Success -> {
                         _businesses.value = it.data

@@ -19,6 +19,7 @@ dependencies {
     implementation("com.google.maps.android:maps-ktx:2.3.0")
     implementation("com.google.maps.android:maps-utils-ktx:2.3.0")
     implementation("com.google.android.gms:play-services-maps:17.0.1")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 
 //    addRoomDependencies()
     addCoroutineDependencies()
