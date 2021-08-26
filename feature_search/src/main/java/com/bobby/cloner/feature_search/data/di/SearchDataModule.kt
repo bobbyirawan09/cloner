@@ -9,7 +9,7 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
-val businessDataModule = module {
+val searchDataModule = module {
     single<SearchRepository> {
         SearchRepositoryImpl(get())
     }

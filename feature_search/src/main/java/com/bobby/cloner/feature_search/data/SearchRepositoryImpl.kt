@@ -13,9 +13,9 @@ import kotlinx.coroutines.flow.Flow
 class SearchRepositoryImpl(
     val remoteDataSource: RemoteDataSource
 ) : SearchRepository {
-    override fun getAutocompleteSuggestion(query: String): Flow<Resource<AutocompleteSuggestion>> =
-        object : NetworkBoundResource<AutocompleteSuggestion, SearchResponse>() {
-            override fun mapResponseToDomain(response: SearchResponse): AutocompleteSuggestion =
+    override fun getAutocompleteSuggestion(query: String): Flow<Resource<List<AutocompleteSuggestion>>> =
+        object : NetworkBoundResource<List<AutocompleteSuggestion>, SearchResponse>() {
+            override fun mapResponseToDomain(response: SearchResponse): List<AutocompleteSuggestion> =
                 DataMapper.mapResponseToDomain(response)
 
             override suspend fun createCall(): Flow<ApiResponse<SearchResponse>> =

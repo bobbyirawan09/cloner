@@ -8,4 +8,5 @@ object BuildModules {
     const val LIBRARY = ":library"
     const val FEATURE_CATEGORY = ":feature_category"
     const val FEATURE_BUSINESS = ":feature_business"
+    const val FEATURE_SEARCH = ":feature_search"
 }

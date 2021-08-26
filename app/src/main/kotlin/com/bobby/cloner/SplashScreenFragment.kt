@@ -20,6 +20,6 @@ class SplashScreenFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         NavHostFragment.findNavController(this)
-            .navigate(R.id.action_splashScreenFragment_to_business_navigation)
+            .navigate(R.id.action_splashScreenFragment_to_search_navigation)
     }
 }

@@ -100,6 +100,7 @@ dependencies {
     implementation(project(BuildModules.CORE))
     implementation(project(BuildModules.FEATURE_CATEGORY))
     implementation(project(BuildModules.FEATURE_BUSINESS))
+    implementation(project(BuildModules.FEATURE_SEARCH))
 
     implementation(Dependencies.APPCOMPAT)
     implementation(Dependencies.CONSTRAINT_LAYOUT)

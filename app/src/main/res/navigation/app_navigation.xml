@@ -7,14 +7,16 @@
 
     <include app:graph="@navigation/business_navigation" />
 
+    <include app:graph="@navigation/search_navigation"/>
+
     <fragment
         android:id="@+id/splashScreenFragment"
         android:name="com.bobby.cloner.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen">
         <action
-            android:id="@+id/action_splashScreenFragment_to_business_navigation"
-            app:destination="@id/business_navigation" />
+            android:id="@+id/action_splashScreenFragment_to_search_navigation"
+            app:destination="@id/search_navigation" />
     </fragment>
 
 </navigation>

@@ -6,6 +6,6 @@ import com.bobby.cloner.feature_search.domain.repository.SearchRepository
 import kotlinx.coroutines.flow.Flow
 
 class GetYelpSuggestionUseCase(private val repository: SearchRepository) {
-    fun getAutocompleteSuggestion(query: String): Flow<Resource<AutocompleteSuggestion>> =
+    fun getAutocompleteSuggestion(query: String): Flow<Resource<List<AutocompleteSuggestion>>> =
         repository.getAutocompleteSuggestion(query)
 }

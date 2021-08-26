@@ -9,7 +9,7 @@ import com.bobby.cloner.feature_search.domain.model.CategorySuggestion
 
 object DataMapper {
 
-    fun mapResponseToDomain(response: SearchResponse?): AutocompleteSuggestion {
+    fun mapResponseToDomain(response: SearchResponse?): List<AutocompleteSuggestion> {
         val business = response?.businesses?.map {
             mapResponseToDomain(it)
         }.orEmpty()
@@ -18,19 +18,18 @@ object DataMapper {
             mapResponseToDomain(it)
         }.orEmpty()
 
-        return AutocompleteSuggestion(
-            business,
-            category
-        )
+        return business + category
     }
 
-    fun mapResponseToDomain(response: SearchBusinessResponse?) = BusinessSuggestion(
+    fun mapResponseToDomain(response: SearchBusinessResponse?) = AutocompleteSuggestion(
         response?.name.orEmpty(),
-        response?.id.orEmpty()
+        response?.id.orEmpty(),
+        ""
     )
 
-    fun mapResponseToDomain(response: SearchCategoryResponse?) = CategorySuggestion(
-        response?.alias.orEmpty(),
-        response?.title.orEmpty()
+    fun mapResponseToDomain(response: SearchCategoryResponse?) = AutocompleteSuggestion(
+        alias = response?.alias.orEmpty(),
+        name = response?.title.orEmpty(),
+        id = ""
     )
 }
